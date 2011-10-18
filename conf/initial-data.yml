@@ -1,0 +1,20 @@
+Author(codegeek):
+  firstName: Steven
+  lastName: Rigney
+  nickName: code_geek
+Author(awesomewife):
+  firstName: Erin
+  lastName: Rigney
+  nickName: awesome_wife
+Author(adycakes):
+  firstName: Adylynn
+  lastName: Maple
+  nickName: adycakes
+Topic(cooking):
+  topic: "I make awesome potato soup"
+  author: awesomewife
+  date: 2011-05-13
+Topic(work):
+  topic: "I am an awesome programmer"
+  author: codegeek
+  date: 2011-05-11
