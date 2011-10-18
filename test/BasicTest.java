@@ -38,10 +38,15 @@ public class BasicTest extends UnitTest {
 	public void createAndRetrieveAPost() {
 		Author author = new Author("Steven", "Rigney", "codegeek").save();
 		
+		Author topicCreator = new Author("Erin", "Rigney", "awesomewife").save();
+		Topic topic = new Topic("I make the best potato soup", new Date(), topicCreator).save();
+		
 		Date savedDate = new Date();
-		new Post(savedDate, "I agree", author).save();
+		new Post(savedDate, "I agree", author, topic).save();
 		Post post = Post.find("byDate", savedDate).first();
 		assertNotNull(post);
 		assertEquals("I agree", post.comment);
+		assertEquals("I make the best potato soup", post.topic.topic);
+		assertEquals("awesomewife", post.topic.author.nickName);
 	}
 }

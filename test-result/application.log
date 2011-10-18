@@ -21,3 +21,57 @@ play.exceptions.CompilationException: The constructor Topic(String, Date, Author
 	at Invocation.HTTP Request(Play!)
 17 Oct 2011 22:16:05,722 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
 17 Oct 2011 22:16:06,474 INFO  ~ Application 'forum' is now started !
+17 Oct 2011 22:22:41,965 ERROR ~ 
+
+@685c83la7
+Internal Server Error (500) for request GET /@tests/init
+
+Compilation error (In /test/BasicTest.java around line 50)
+The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEquls(String, String) is undefined for the type BasicTest
+
+play.exceptions.CompilationException: The method assertEquls(String, String) is undefined for the type BasicTest
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:22:42,432 ERROR ~ 
+
+@685c83la8
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /test/BasicTest.java around line 50)
+The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEquls(String, String) is undefined for the type BasicTest
+
+play.exceptions.CompilationException: The method assertEquls(String, String) is undefined for the type BasicTest
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:22:56,823 ERROR ~ 
+
+@685c83la9
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /test/BasicTest.java around line 50)
+The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEqulas(String, String) is undefined for the type BasicTest
+
+play.exceptions.CompilationException: The method assertEqulas(String, String) is undefined for the type BasicTest
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)

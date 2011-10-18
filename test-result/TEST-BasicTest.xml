@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="0" time="0.035" errors="0" skipped="0" tests="4" name="BasicTest">
-  <testcase classname="BasicTest" name="aVeryImportantThingToTest" time="0.004">
+<testsuite failures="0" time="0.034" errors="0" skipped="0" tests="4" name="BasicTest">
+  <testcase classname="BasicTest" name="aVeryImportantThingToTest" time="0.007">
       </testcase>
-  <testcase classname="BasicTest" name="verifyEmptyDB" time="0.007">
+  <testcase classname="BasicTest" name="verifyEmptyDB" time="0.005">
       </testcase>
-  <testcase classname="BasicTest" name="createAndRetrieveATopic" time="0.009">
+  <testcase classname="BasicTest" name="createAndRetrieveATopic" time="0.01">
       </testcase>
-  <testcase classname="BasicTest" name="createAndRetrieveAPost" time="0.015">
+  <testcase classname="BasicTest" name="createAndRetrieveAPost" time="0.012">
       </testcase>
 </testsuite>

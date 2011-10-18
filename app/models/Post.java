@@ -17,10 +17,11 @@ public class Post extends Model {
     @ManyToOne
     public Topic topic;
     
-    public Post(Date dt, String comment, Author author) {
+    public Post(Date dt, String comment, Author author, Topic topic) {
         this.date = dt;
         this.comment = comment;
         this.author = author;
+        this.topic = topic;
     }
 
 }
