@@ -17,8 +17,8 @@ public class Post extends Model {
     @ManyToOne
     public Topic topic;
     
-    public Post(Date dt, String comment, Author author, Topic topic) {
-        this.date = dt;
+    public Post(String comment, Author author, Topic topic) {
+        this.date = new Date();
         this.comment = comment;
         this.author = author;
         this.topic = topic;

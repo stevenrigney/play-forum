@@ -75,3 +75,146 @@ play.exceptions.CompilationException: The method assertEqulas(String, String) is
 	at play.Play.detectChanges(Play.java:595)
 	at play.Invoker$Invocation.init(Invoker.java:186)
 	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:32:35,971 ERROR ~ 
+
+@685c83laa
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /app/models/Topic.java around line 27)
+The file /app/models/Topic.java could not be compiled. Error raised is : Sting cannot be resolved to a type
+
+play.exceptions.CompilationException: Sting cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:32:36,068 ERROR ~ 
+
+@685c83lab
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /app/models/Topic.java around line 27)
+The file /app/models/Topic.java could not be compiled. Error raised is : Sting cannot be resolved to a type
+
+play.exceptions.CompilationException: Sting cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:32:43,558 ERROR ~ 
+
+@685c83lac
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /app/models/Topic.java around line 28)
+The file /app/models/Topic.java could not be compiled. Error raised is : Syntax error, insert ";" to complete BlockStatements
+
+play.exceptions.CompilationException: Syntax error, insert ";" to complete BlockStatements
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:474)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:32:54,140 ERROR ~ 
+
+@685c83lad
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /app/models/Topic.java around line 28)
+The file /app/models/Topic.java could not be compiled. Error raised is : Date cannot be resolved to a variable
+
+play.exceptions.CompilationException: Date cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:32:55,454 ERROR ~ 
+
+@685c83lae
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /app/models/Topic.java around line 28)
+The file /app/models/Topic.java could not be compiled. Error raised is : Date cannot be resolved to a variable
+
+play.exceptions.CompilationException: Date cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:36:07,946 ERROR ~ 
+
+@685c83laf
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /test/BasicTest.java around line 28)
+The file /test/BasicTest.java could not be compiled. Error raised is : The constructor Topic(String, Date, Author) is undefined
+
+play.exceptions.CompilationException: The constructor Topic(String, Date, Author) is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:38:51,608 ERROR ~ 
+
+@685c83lag
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /test/BasicTest.java around line 60)
+The file /test/BasicTest.java could not be compiled. Error raised is : Duplicate local variable author
+
+play.exceptions.CompilationException: Duplicate local variable author
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+17 Oct 2011 22:39:10,994 ERROR ~ 
+
+@685c83lah
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+
+Compilation error (In /test/BasicTest.java around line 65)
+The file /test/BasicTest.java could not be compiled. Error raised is : Comment cannot be resolved
+
+play.exceptions.CompilationException: Comment cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
