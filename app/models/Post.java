@@ -9,16 +9,18 @@ import play.db.jpa.*;
 public class Post extends Model {
  
     public Date date;
-    public String author;
     public String comment;
+    
+    @ManyToOne
+    public Author author;
     
     @ManyToOne
     public Topic topic;
     
-    public Post(Date dt, String author, String comment) {
+    public Post(Date dt, String comment, Author author) {
         this.date = dt;
-        this.author = author;
         this.comment = comment;
+        this.author = author;
     }
 
 }

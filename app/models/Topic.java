@@ -10,12 +10,14 @@ public class Topic extends Model {
  
     public String topic;
     public Date date;
-    public String by;
     
-    public Topic(String topic, Date dt, String by) {
+    @ManyToOne
+    public Author author;
+    
+    public Topic(String topic, Date dt, Author author) {
         this.topic = topic;
         this.date = dt;
-        this.by = by;
+        this.author = author;
     }
     
 }

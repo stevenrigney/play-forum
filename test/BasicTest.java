@@ -23,18 +23,24 @@ public class BasicTest extends UnitTest {
 
 	@Test
 	public void createAndRetrieveATopic() {
-		new Topic("this is awesome", new Date(), "Steve").save();
+		Author author = new Author("Steven", "Rigney", "codegeek").save();
+
+		new Topic("this is awesome", new Date(), author).save();
 		
 		Topic saved = Topic.find("byTopic", "this is awesome").first();
 		
 		assertNotNull(saved);
 		assertEquals("this is awesome", saved.topic);
+		assertEquals("Steven", saved.author.firstName);
 	}
 	
 	@Test
 	public void createAndRetrieveAPost() {
-		new Post(new Date(), "Steve", "I agree").save();
-		Post post = Post.find("byAuthor", "Steve").first();
+		Author author = new Author("Steven", "Rigney", "codegeek").save();
+		
+		Date savedDate = new Date();
+		new Post(savedDate, "I agree", author).save();
+		Post post = Post.find("byDate", savedDate).first();
 		assertNotNull(post);
 		assertEquals("I agree", post.comment);
 	}
