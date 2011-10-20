@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'View Topic' /}
+
+Topic: <b>${topic.topic}</b> by ${topic.author.firstName} ${topic.author.lastName}
+
+<table>
+#{list items:topic.posts, as:'currentPost'}
+<tr>
+	<td>${currentPost.comment}</td>
+	<td>${currentPost.date}</td>
+	<td>${currentPost.author.nickName}</td>
+</tr>
+#{/list}
+</table>
+
+#{form @Application.SaveComment()}
+	<p>Add a new Comment.</p>
+	<input type="hidden" name="id" value="${topic.id}"/>
+	<textarea name="comment"></textarea>
+	<br>
+	<input type="submit" value="Save New Comment" />
+	<a href="@{Application.index()}">Home</a>
+#{/form}

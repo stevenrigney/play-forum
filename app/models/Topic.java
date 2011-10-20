@@ -8,11 +8,11 @@ import play.db.jpa.*;
 @Entity
 public class Topic extends Model {
  
-    public String topic;
-    public Date date;
-    
-    @ManyToOne
-    public Author author;
+	public String topic;
+	public Date date;
+	
+	@ManyToOne
+	public Author author;
     
    @OneToMany(mappedBy="topic", cascade=CascadeType.ALL)
 	public List<Post> posts;

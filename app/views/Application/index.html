@@ -1,13 +1,27 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'Forum' /}
 
-<table>
-	<thead>
-		<th>Topic</th>
-		<th>Updated</th>
-		<th>By</th>
-		<th>Comments</th>
-	</thead>
-	<tbody>
-	</tbody>
-</table>
+#{form @Application.AddTopic()}
+	<input type="submit" value="Add New Topic" />
+#{/form}
+#{if recentTopics}
+	<table>
+		<thead>
+			<th>Topic</th>
+			<th>Updated</th>
+			<th>By</th>
+			<th>Comments</th>
+		</thead>
+		<tbody>
+			 #{list items:recentTopics, as:'currentTopic'}
+				<tr>
+					<td><a href='@{Application.showTopic(currentTopic.id)}'>${currentTopic.topic}</a></td>
+					<td>${currentTopic.date}</td>
+					<td>${currentTopic.author.nickName}</td>
+					<td>${currentTopic.posts.size()}</td>
+				</tr>
+			#{/list}
+		</tbody>
+	</table>
+#{/if}
+ 

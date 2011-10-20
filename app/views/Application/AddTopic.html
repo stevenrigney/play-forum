@@ -1,0 +1,10 @@
+#{extends 'main.html' /}
+#{set title:'Add Topic' /}
+
+#{form @Application.SaveTopic()}
+	<p>Add a new topic.</p>
+	<textarea name='topic'></textarea>
+	<br>
+	<input type="submit" value="Save New Topic" />
+	<a href="@{Application.index()}">cancel</a>
+#{/form}

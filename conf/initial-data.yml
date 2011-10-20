@@ -2,14 +2,17 @@ Author(codegeek):
   firstName: Steven
   lastName: Rigney
   nickName: code_geek
+  password: ftw
 Author(awesomewife):
   firstName: Erin
   lastName: Rigney
   nickName: awesome_wife
+  password: adymommy
 Author(adycakes):
   firstName: Adylynn
   lastName: Maple
   nickName: adycakes
+  password: adycakes
 Topic(cooking):
   topic: "I make awesome potato soup"
   author: awesomewife

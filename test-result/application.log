@@ -1,178 +1,162 @@
-17 Oct 2011 22:15:44,499 INFO  ~ Starting c:\code\play\forum
-17 Oct 2011 22:15:45,149 WARN  ~ You're running Play! in DEV mode
-17 Oct 2011 22:15:45,293 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-17 Oct 2011 22:15:48,223 ERROR ~ 
+17 Oct 2011 23:03:47,944 INFO  ~ Starting c:\code\play\forum
+17 Oct 2011 23:03:48,599 WARN  ~ You're running Play! in DEV mode
+17 Oct 2011 23:03:48,740 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+17 Oct 2011 23:03:52,204 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+17 Oct 2011 23:03:53,139 INFO  ~ Application 'forum' is now started !
+17 Oct 2011 23:06:42,103 ERROR ~ 
 
-@685c83la6
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2i
+Internal Server Error (500) for request GET /
 
-Compilation error (In /test/BasicTest.java around line 28)
-The file /test/BasicTest.java could not be compiled. Error raised is : The constructor Topic(String, Date, Author) is undefined
+Template compilation error (In /app/views/Application/index.html around line 4)
+The template /app/views/Application/index.html does not compile : #{if} is not closed.
 
-play.exceptions.CompilationException: The constructor Topic(String, Date, Author) is undefined
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:412)
-	at play.Play.start(Play.java:485)
-	at play.Play.detectChanges(Play.java:610)
-	at play.Invoker$Invocation.init(Invoker.java:186)
+play.exceptions.TemplateCompilationException: #{if} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.index(Application.java:17)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
 	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:16:05,722 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
-17 Oct 2011 22:16:06,474 INFO  ~ Application 'forum' is now started !
-17 Oct 2011 22:22:41,965 ERROR ~ 
+17 Oct 2011 23:07:03,606 ERROR ~ 
 
-@685c83la7
-Internal Server Error (500) for request GET /@tests/init
+@685celg2j
+Error during job execution (Bootstrap)
 
-Compilation error (In /test/BasicTest.java around line 50)
-The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEquls(String, String) is undefined for the type BasicTest
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: The method assertEquls(String, String) is undefined for the type BasicTest
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:22:42,432 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:07:03,719 ERROR ~ 
 
-@685c83la8
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2j
+Internal Server Error (500) for request GET /
 
-Compilation error (In /test/BasicTest.java around line 50)
-The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEquls(String, String) is undefined for the type BasicTest
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: The method assertEquls(String, String) is undefined for the type BasicTest
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:22:56,823 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:07:06,302 ERROR ~ 
 
-@685c83la9
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2k
+Error during job execution (Bootstrap)
 
-Compilation error (In /test/BasicTest.java around line 50)
-The file /test/BasicTest.java could not be compiled. Error raised is : The method assertEqulas(String, String) is undefined for the type BasicTest
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: The method assertEqulas(String, String) is undefined for the type BasicTest
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:32:35,971 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:07:06,438 ERROR ~ 
 
-@685c83laa
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2k
+Internal Server Error (500) for request GET /
 
-Compilation error (In /app/models/Topic.java around line 27)
-The file /app/models/Topic.java could not be compiled. Error raised is : Sting cannot be resolved to a type
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: Sting cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:32:36,068 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:07:07,999 ERROR ~ 
 
-@685c83lab
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2l
+Error during job execution (Bootstrap)
 
-Compilation error (In /app/models/Topic.java around line 27)
-The file /app/models/Topic.java could not be compiled. Error raised is : Sting cannot be resolved to a type
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: Sting cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:32:43,558 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:07:08,106 ERROR ~ 
 
-@685c83lac
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2l
+Internal Server Error (500) for request GET /
 
-Compilation error (In /app/models/Topic.java around line 28)
-The file /app/models/Topic.java could not be compiled. Error raised is : Syntax error, insert ";" to complete BlockStatements
+Execution exception (In /app/Bootstrap.java around line 13)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: Syntax error, insert ";" to complete BlockStatements
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:474)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:32:54,140 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:13)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:08:00,018 ERROR ~ 
 
-@685c83lad
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2m
+Internal Server Error (500) for request GET /
 
-Compilation error (In /app/models/Topic.java around line 28)
-The file /app/models/Topic.java could not be compiled. Error raised is : Date cannot be resolved to a variable
+Compilation error (In /app/Bootstrap.java around line 12)
+The file /app/Bootstrap.java could not be compiled. Error raised is : count cannot be resolved or is not a field
 
-play.exceptions.CompilationException: Date cannot be resolved to a variable
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:32:55,454 ERROR ~ 
-
-@685c83lae
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
-
-Compilation error (In /app/models/Topic.java around line 28)
-The file /app/models/Topic.java could not be compiled. Error raised is : Date cannot be resolved to a variable
-
-play.exceptions.CompilationException: Date cannot be resolved to a variable
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:36:07,946 ERROR ~ 
-
-@685c83laf
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
-
-Compilation error (In /test/BasicTest.java around line 28)
-The file /test/BasicTest.java could not be compiled. Error raised is : The constructor Topic(String, Date, Author) is undefined
-
-play.exceptions.CompilationException: The constructor Topic(String, Date, Author) is undefined
+play.exceptions.CompilationException: count cannot be resolved or is not a field
 	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
 	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
 	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
@@ -182,33 +166,55 @@ play.exceptions.CompilationException: The constructor Topic(String, Date, Author
 	at play.Play.detectChanges(Play.java:595)
 	at play.Invoker$Invocation.init(Invoker.java:186)
 	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:38:51,608 ERROR ~ 
+17 Oct 2011 23:08:29,137 ERROR ~ 
 
-@685c83lag
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2n
+Error during job execution (Bootstrap)
 
-Compilation error (In /test/BasicTest.java around line 60)
-The file /test/BasicTest.java could not be compiled. Error raised is : Duplicate local variable author
+Execution exception (In /app/Bootstrap.java around line 14)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: Duplicate local variable author
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-17 Oct 2011 22:39:10,994 ERROR ~ 
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:14)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:08:29,225 ERROR ~ 
 
-@685c83lah
-Internal Server Error (500) for request GET /@tests?select=BasicTest.class
+@685celg2n
+Internal Server Error (500) for request GET /
 
-Compilation error (In /test/BasicTest.java around line 65)
-The file /test/BasicTest.java could not be compiled. Error raised is : Comment cannot be resolved
+Execution exception (In /app/Bootstrap.java around line 14)
+RuntimeException occured : Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
 
-play.exceptions.CompilationException: Comment cannot be resolved
+play.exceptions.JavaExecutionException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:223)
+	at Bootstrap.doJob(Bootstrap.java:14)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: java.lang.RuntimeException: Cannot load fixture initial-data.yml, duplicate id 'codegeek' for type models.Author
+	at play.test.Fixtures.loadModels(Fixtures.java:188)
+	... 4 more
+17 Oct 2011 23:09:23,965 ERROR ~ 
+
+@685celg2o
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/Bootstrap.java around line 9)
+The file /app/Bootstrap.java could not be compiled. Error raised is : The method getLogger(Class&lt;Bootstrap>) is undefined for the type Logger
+
+play.exceptions.CompilationException: The method getLogger(Class<Bootstrap>) is undefined for the type Logger
 	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
 	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
 	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)

@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+#{set title:'View Topic' /}
+
+
+#{form @Application.SaveComment()}
+	<p>Add a new Comment.</p>
+	<textarea name='comment'></textarea>
+	<br>
+	<input type="submit" value="Save New Comment" />
+	<a href="@{Application.index()}">cancel</a>
+#{/form}
